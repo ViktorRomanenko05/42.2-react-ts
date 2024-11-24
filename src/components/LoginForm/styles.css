@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 590px;
+    height: 450px;
+    padding: 60px;
+    gap: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.login-header {
+    font-size: 24px;
+    font-family: Lato, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.label-field{
+    gap: 4px;
+    font-family: Lato, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6f6f6f;
+    line-height: 24px;
+}
+
+.input-field{
+    height: 50px;
+    border: 1px solid #3f3f3f;
+    border-radius: 4px;
+    padding: 12px;
+    gap: 10px
+}
+
+.input-field::placeholder {
+    color: #1e1e1e;
+    opacity: 40%;
+    font-family: Lato, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+.main-button{
+    font-size: 20px;
+}
