@@ -1,7 +1,7 @@
 import "./styles.css";
 import Button from "../Button/Button";
 //Шаг 1 - импорт хука useState из react
-import { useState } from "react";
+import {useState} from "react";
 
 function Counter() {
     console.log("Render");
@@ -17,22 +17,22 @@ function Counter() {
     // console.log(setCount);
 
     //Шаг 3 - необходимо прописать функции, которые будут менять состояние. Внутри этих функций нужно использовать setCount
-    const onPlusClick = () => {
-        setCount((prevValue) => prevValue + 1);
+    const onPlusClick = (): void => {
+        setCount((prevValue: number): number => prevValue + 1);
     };
 
-    const onMinusClick = () => {
-        setCount((prevValue) => prevValue - 1);
+    const onMinusClick = (): void => {
+        setCount((prevValue: number): number => prevValue - 1);
     };
 
     return (
         <div className="counter-container">
             <div className="button-wrapper">
-                <Button name="-" onClick={onMinusClick} />
+                <Button buttonParameters={{name: "-", type: "button", onClick: onMinusClick}}/>
             </div>
             <div className="counter-result">{count}</div>
             <div className="button-wrapper">
-                <Button name="+" onClick={onPlusClick} />
+                <Button buttonParameters={{name: "+", type: "button", onClick: onPlusClick}}/>
             </div>
         </div>
     );
