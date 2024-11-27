@@ -1,5 +1,5 @@
 import "./styles.css";
-import { AnimalCardProps } from "./types"
+import { AnimalCardProps } from './types';
 
 // interface Animal {
 //   name: string
