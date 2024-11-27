@@ -1,9 +1,7 @@
-interface Button {
-    name?: string
-    type?: "submit" | "reset" | "button"
-    onClick?: any
-}
+type ButtonType = "button" | 'submit' | "reset";
 
 export interface ButtonProps {
-    buttonParameters: Button
+    name: string;
+    type?: ButtonType;
+    onClick?: () => void;
 }

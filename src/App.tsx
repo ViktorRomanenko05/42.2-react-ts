@@ -1,11 +1,8 @@
 import './App.css';
+import Lesson07 from "./lessons/lesson07/Lesson07";
 
 //lessons
-import Lesson06 from './lessons/Lesson06/Lesson06';
-import Counter from "./components/Counter/Counter";
-import Feedback from "./components/Feedback/Feedback";
-import Input from "./components/Input/Input";
-import LoginForm from "./components/LoginForm/LoginForm";
+// import Lesson06 from './lessons/Lesson06/Lesson06';
 
 //homeworks
 
@@ -14,17 +11,8 @@ import LoginForm from "./components/LoginForm/LoginForm";
 function App() {
     return (
         <div className="App">
-            {/*<Lesson06 />*/}
-            {/*<Counter />*/}
-            {/*<Feedback />*/}
-            {/*<Input inputParameters=*/}
-            {/*           {{*/}
-            {/*               name: "test input",*/}
-            {/*               type: "text",*/}
-            {/*               placeholder: "try input",*/}
-            {/*               label: "Test input"*/}
-            {/*           }}/>*/}
-            <LoginForm/>
+            {/* <Lesson06 /> */}
+            <Lesson07 />
         </div>
     );
 }

@@ -1,10 +1,7 @@
-interface Input {
-    name?: string
-    type: string
-    placeholder?: string
-    label?: string
-}
-
 export interface InputProps {
-    inputParameters: Input
+    name: string,
+    id?: string,
+    type?: 'text' | 'email' | 'password' | 'tel',
+    placeholder?: string,
+    label?: string
 }

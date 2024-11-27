@@ -1,18 +1,31 @@
-import "./styles.css"
-import Input from "../Input/Input";
 import Button from "../Button/Button";
+import Input from "../Input/Input";
+import "./styles.ts";
+import { LoginFormWrapper, LoginFormTitle, InputsContainer } from './styles';
 
-function LoginForm  ()  {
+function LoginForm() {
     return (
-        <form className="login-form">
-            <h3 className="login-header">Login form</h3>
-            <div className="inputs-container">
-                <Input inputParameters={{ type: "text", placeholder: "Enter your email", label: "Email", name: "email"}} />
-                <Input inputParameters={{ type:"password", placeholder: "Enter your password", label: "Password", name: "password"}} />
-            </div>
-            <Button buttonParameters={{ type:"submit", name: "Login" }}></Button>
-        </form>
-    )
+        <LoginFormWrapper>
+            <LoginFormTitle>Login form</LoginFormTitle>
+            <InputsContainer>
+                <Input
+                    name="email"
+                    id="user_email"
+                    type="email"
+                    placeholder="Enter your email"
+                    label="Email"
+                />
+                <Input
+                    name="password"
+                    id="user_password"
+                    type="password"
+                    placeholder="Enter your password"
+                    label="Password"
+                />
+            </InputsContainer>
+            <Button name="Login" type="submit" />
+        </LoginFormWrapper>
+    );
 }
 
-export default LoginForm
+export default LoginForm;

@@ -1,13 +1,19 @@
-import "./styles.css"
-import {InputProps} from "./types"
+import "./styles.css";
+import { InputProps } from './types'
 
-function Input({inputParameters}: InputProps) {
+function Input({ name, id, type = 'text', placeholder, label }: InputProps) {
     return (
-        <label className="label-field">
-            {inputParameters.label}
-            <input className="input-field" name={inputParameters.name} type={inputParameters.type}
-                   placeholder={inputParameters.placeholder}/>
-        </label>
+        <div className="input-container">
+            {/* Пример оператора условного рендеринга */}
+            {label && <label htmlFor={id}>{label}</label>}
+            <input
+                id={id}
+                name={name}
+                type={type}
+                placeholder={placeholder}
+                className="input-element"
+            />
+        </div>
     );
 }
 
