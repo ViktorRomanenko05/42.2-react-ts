@@ -1,16 +1,20 @@
-.main-button {
+import styled from "@emotion/styled";
+
+
+export const ButtonComponent = styled.button`
     width: 100%;
     height: 70px;
     outline: none;
     border: none;
     padding: 20px;
-    background: #1f27f5;
     border-radius: 4px;
     color: white;
     font-family: Lato, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     cursor: pointer;
-}
+    background-color: ${(props) => props.disabled?  "#a4a5ba" : "#1f27f5"};`
+
+// background-color: ${(props) => props.primary ? "red" : 'blue'};
 
 /* old styles */
 /* .main-button {
