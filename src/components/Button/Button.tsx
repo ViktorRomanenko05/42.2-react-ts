@@ -1,14 +1,14 @@
-import "./styles";
+import "./styles.ts";
 import { ButtonProps } from "./types";
-import {ButtonComponent} from "./styles";
+import { MainButton } from './styles';
 
-function Button({ name, type = "button", disabled, onClick }: ButtonProps) {
+function Button({ name, type = "button", onClick, disabled = false }: ButtonProps) {
     // console.log(props.buttonName);
 
     return (
-        <ButtonComponent onClick={onClick} type={type} disabled={disabled}>
+        <MainButton onClick={onClick} type={type} disabled={disabled}>
             {name}
-        </ButtonComponent>
+        </MainButton>
     );
 }
 

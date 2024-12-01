@@ -1,7 +1,12 @@
 import { useState } from "react";
 import Button from "../Button/Button";
 import "./styles.ts";
-import {FeedbackContainer, FeedbackResultContainer, LikeDislikeContainer, Result} from "./styles";
+import {
+    FeedbackContainer,
+    FeedbackResultContainer,
+    LikeDislikeContainer,
+    Result
+} from './styles';
 
 function Feedback() {
     const [likes, setLikes] = useState<number>(0);
@@ -24,7 +29,7 @@ function Feedback() {
         <FeedbackContainer>
             <FeedbackResultContainer>
                 <LikeDislikeContainer>
-                    <div className="result">{likes}</div>
+                    <Result>{likes}</Result>
                     <Button name="LIKE" onClick={addLike} />
                 </LikeDislikeContainer>
                 <LikeDislikeContainer>

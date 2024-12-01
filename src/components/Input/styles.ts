@@ -1,16 +1,16 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 4px;
     width: 100%;
-`
+`;
 
-export const LabelForInput = styled.label`
+export const Label = styled.label`
     font-size: 16px;
     color: #6f6f6f;
-`
+`;
 
 export const InputElement = styled.input`
     width: 100%;
@@ -24,4 +24,4 @@ export const InputElement = styled.input`
     &::placeholder {
         color: #a19f9f;
     }
-`
+`;

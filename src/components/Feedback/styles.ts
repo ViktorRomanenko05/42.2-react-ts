@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const FeedbackContainer = styled.div`
     display: flex;
@@ -7,12 +7,13 @@ export const FeedbackContainer = styled.div`
     width: 800px;
     padding: 20px;
     background-color: rgb(213, 247, 236);
-`
-export const FeedbackResultContainer = styled.div `
+`;
+
+export const FeedbackResultContainer = styled.div`
     display: flex;
     gap: 30px;
     width: 100%;
-`
+`;
 
 export const LikeDislikeContainer = styled.div`
     display: flex;
@@ -20,7 +21,7 @@ export const LikeDislikeContainer = styled.div`
     gap: 20px;
     align-items: center;
     width: 100%;
-`
+`;
 
 export const Result = styled.div`
     min-width: 70px;
@@ -28,4 +29,4 @@ export const Result = styled.div`
     font-size: 34px;
     font-weight: bold;
     color: rgb(9, 137, 95);
-`
+`;
