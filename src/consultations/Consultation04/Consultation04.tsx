@@ -1,5 +1,5 @@
 import LoginForm from '../../components/LoginForm/LoginForm';
-import ProductItem from '../../components/ProductItem/ProductItem'
+import ProductItem from '../../components/ProductItem/ProductItem';
 import { Consultation04Container } from './styles';
 
 function Consultation04() {
