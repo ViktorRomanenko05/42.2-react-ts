@@ -1,3 +1,5 @@
+import {ReactNode} from "react";
+
 type ButtonType = "button" | 'submit' | "reset";
 
 export interface ButtonProps {
@@ -5,4 +7,6 @@ export interface ButtonProps {
     type?: ButtonType;
     onClick?: () => void;
     disabled?: boolean;
+    loading?: boolean;
+    spinner?: ReactNode;
 }
