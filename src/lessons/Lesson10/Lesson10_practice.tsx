@@ -7,7 +7,8 @@ import {
     ButtonsBlock,
     ResultContainer,
     DeleteButtonWrapper,
-    FactItem
+    FactItem,
+    Spinner
 } from "./styles";
 
 const CAT_FACT_URL = "https://catfact.ninja/fact";
@@ -33,8 +34,9 @@ function Lesson10_practice() {
 
     //Запрашиваем данные при монтировании (первом рендеринге) элемента
     useEffect(() => {
-        if (factsList.length===0){    //Иногда хук срабатывал при переключениях
-        getFact();}                   //между окнами и вкладками, поэтому добавил if
+        if (factsList.length === 0) {    //Иногда хук срабатывал при переключениях
+            getFact();
+        }                   //между окнами и вкладками, поэтому добавил if
     }, []);
 
     //Функция для запроса факта
@@ -69,9 +71,13 @@ function Lesson10_practice() {
     return (
         <Lesson10container>
             <ButtonsBlock>
-                <Button name={"GET MORE INFO"} onClick={getFact} loading={loadingStatus} disabled={loadingStatus} />
-                {factsList.length!==0 &&
-                <Button name={"DELETE ALL DATA"} onClick={deleteAllData}/>}
+                <Button name={"GET MORE INFO"}
+                        onClick={getFact}
+                        loading={loadingStatus}
+                        disabled={loadingStatus}
+                        spinner={<Spinner/>}/>
+                {factsList.length !== 0 &&
+                    <Button name={"DELETE ALL DATA"} onClick={deleteAllData}/>}
             </ButtonsBlock>
             {factsList.length > 0 && (
                 <ResultContainer>
