@@ -8,7 +8,8 @@ import {
     ResultContainer,
     DeleteButtonWrapper,
     FactItem,
-    Spinner
+    Spinner,
+    ErrorMessage
 } from "./styles";
 
 const CAT_FACT_URL = "https://catfact.ninja/fact";
@@ -79,6 +80,9 @@ function Lesson10_practice() {
                 {factsList.length !== 0 &&
                     <Button name={"DELETE ALL DATA"} onClick={deleteAllData}/>}
             </ButtonsBlock>
+            {error && (
+                <ErrorMessage>{error.message}</ErrorMessage>
+            )}
             {factsList.length > 0 && (
                 <ResultContainer>
                     {factsList.map((factItem) => (

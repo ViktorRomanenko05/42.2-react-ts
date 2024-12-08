@@ -60,3 +60,9 @@ export const FactItem = styled.div`
     border-radius: 4px;
     position: relative;
 `;
+
+export const ErrorMessage = styled.div`
+    ${flexContainerStyles};
+    font-size: 28px;
+    color: red;
+`
