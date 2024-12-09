@@ -52,17 +52,20 @@ export const Spinner = styled.div`
     margin: 0 auto;
 `;
 
-export const FactItem = styled.div`
+export const FactItemContainer = styled.div`
     ${flexContainerStyles};
     justify-content: space-between;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
     position: relative;
+    gap: 20px;
 `;
 
-export const ErrorMessage = styled.div`
+export const ErrorMessageDisplay = styled.div`
     ${flexContainerStyles};
     font-size: 28px;
     color: red;
 `
+
+export const PageTitle = styled.h2``;

@@ -7,9 +7,10 @@ import {
     ButtonsBlock,
     ResultContainer,
     DeleteButtonWrapper,
-    FactItem,
+    FactItemContainer,
     Spinner,
-    ErrorMessage
+    ErrorMessageDisplay,
+    PageTitle
 } from "./styles";
 
 const CAT_FACT_URL = "https://catfact.ninja/fact";
@@ -71,6 +72,7 @@ function Lesson10_practice() {
 
     return (
         <Lesson10container>
+            <PageTitle>CATFACTS</PageTitle>
             <ButtonsBlock>
                 <Button name={"GET MORE INFO"}
                         onClick={getFact}
@@ -81,17 +83,17 @@ function Lesson10_practice() {
                     <Button name={"DELETE ALL DATA"} onClick={deleteAllData}/>}
             </ButtonsBlock>
             {error && (
-                <ErrorMessage>{error.message}</ErrorMessage>
+                <ErrorMessageDisplay>{error.message}</ErrorMessageDisplay>
             )}
             {factsList.length > 0 && (
                 <ResultContainer>
-                    {factsList.map((factItem) => (
-                        <FactItem key={factItem.id}>
+                    {factsList.map((factItem: FactUnit) => (
+                        <FactItemContainer key={factItem.id}>
                             {factItem.factText}
                             <DeleteButtonWrapper>
                                 <Button name="DELETE" onClick={() => deleteFact(factItem.id)}/>
                             </DeleteButtonWrapper>
-                        </FactItem>
+                        </FactItemContainer>
                     ))}
                 </ResultContainer>
             )}
