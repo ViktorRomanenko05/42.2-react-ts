@@ -1,21 +1,27 @@
-import styled from '@emotion/styled';
+import "./styles.ts";
+import { AnimalCardProps } from './types';
+import {AnimalCardWrapper, AnimalName, AnimalSpecies, AnimalImage} from './styles';
 
-export const AnimalCardWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 300px;
-  padding: 30px;
-  background-color: rgb(222, 180, 224);
-  border-radius: 6px;
-  font-size: 24px;
-`;
+// interface Animal {
+//   name: string
+//   species: string
+//   role: string
+//   skills: string[]
+//   image: string
+// }
 
-export const AnimalName = styled.h3``;
+// interface AnimalCardProps {
+//   animalData: Animal
+// }
 
-export const AnimalSpecies = styled.div``;
+function AnimalCard({ animalData }: AnimalCardProps) {
+    return (
+        <AnimalCardWrapper>
+            <AnimalName>{animalData.name}</AnimalName>
+            <AnimalSpecies>{animalData.species}</AnimalSpecies>
+            <AnimalImage src={animalData.image} />
+        </AnimalCardWrapper>
+    );
+}
 
-export const AnimalImage = styled.img`
-  width: 100px;
-`;
+export default AnimalCard;

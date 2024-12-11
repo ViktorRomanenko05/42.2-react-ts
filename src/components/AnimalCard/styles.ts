@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const AnimalCardWrapper = styled.div`
     display: flex;
@@ -10,8 +10,12 @@ export const AnimalCardWrapper = styled.div`
     background-color: rgb(222, 180, 224);
     border-radius: 6px;
     font-size: 24px;
+`;
 
-    img {
-        width: 100px;
-    }
-`
+export const AnimalName = styled.h3``;
+
+export const AnimalSpecies = styled.div``;
+
+export const AnimalImage = styled.img`
+  width: 100px;
+`;

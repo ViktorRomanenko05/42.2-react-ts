@@ -1,4 +1,4 @@
-import {ChangeEvent} from "react";
+import { ChangeEvent } from "react";
 
 export interface InputProps {
     name: string,
@@ -6,6 +6,8 @@ export interface InputProps {
     type?: 'text' | 'email' | 'password' | 'tel',
     placeholder?: string,
     label?: string,
-    onChange?: (event: ChangeEvent<HTMLInputElement>) => void,
-    value?: string
+    // временно делаем пропсы value и onChange необязательными, чтобы не было ошибок в старых компонентах
+    value?: string,
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void
+    error?: string;
 }
