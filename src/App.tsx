@@ -3,6 +3,7 @@ import Lesson08 from "./lessons/lesson08/Lesson08";
 import Homework08 from "./homeworks/Homework08/Homework08";
 
 import Lesson10_practice from "./lessons/Lesson10/Lesson10_practice";
+import EmployeeForm from "./components/EmployeeForm/EmployeeForm";
 
 
 //lessons
@@ -27,8 +28,8 @@ function App() {
             {/* <Homework07 /> */}
             {/*<Lesson08 />*/}
             {/*<Homework08/>*/}
-
-            <Lesson10_practice />
+            {/*<Lesson10_practice />*/}
+            <EmployeeForm />
         </>
     );
 }
