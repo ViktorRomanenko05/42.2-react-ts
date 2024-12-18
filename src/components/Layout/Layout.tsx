@@ -4,15 +4,11 @@ import { Footer, Header, LayoutComponent, NavContainer, LogoContainer, Main, Sty
 import { LayoutProps } from "./types"
 
 function Layout({ children }: LayoutProps) {
-    const navigate = useNavigate();
 
     return (
         <LayoutComponent>
             <Header>
-                {/* 1-й способ - обертка Link */}
-                {/* <Link to='/'><LogoContainer></LogoContainer></Link> */}
-                {/* 2-й способ - хук useNavigate */}
-                <LogoContainer onClick={() => navigate('/')}></LogoContainer>
+                <LogoContainer ></LogoContainer>
                 <NavContainer>
                     <StyledNavLink to='/' style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
                         Home
@@ -22,9 +18,6 @@ function Layout({ children }: LayoutProps) {
                     </StyledNavLink>
                     <StyledNavLink to='/users' style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
                         Users
-                    </StyledNavLink>
-                    <StyledNavLink to='/clients' style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
-                        Clients
                     </StyledNavLink>
                     <StyledNavLink to='/lesson13' style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
                         Lesson13
