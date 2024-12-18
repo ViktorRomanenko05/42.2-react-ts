@@ -7,7 +7,7 @@ export interface InputProps {
     placeholder?: string,
     label?: string,
     // временно делаем пропсы value и onChange необязательными, чтобы не было ошибок в старых компонентах
-    value?: string,
+    value?: string | boolean | number | null,
     onChange?: (event: ChangeEvent<HTMLInputElement>) => void
     error?: string;
 }
