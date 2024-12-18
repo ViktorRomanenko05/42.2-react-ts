@@ -1,12 +1,15 @@
+import {useNavigate} from "react-router-dom";
 import { Footer, Header, LayoutComponent, NavContainer, LogoContainer, Main, StyledNavLink } from "./styles"
 import { LayoutProps } from "./types"
 
 function Layout({ children }: LayoutProps) {
 
+    const navigate = useNavigate();
+
     return (
         <LayoutComponent>
             <Header>
-                <LogoContainer ></LogoContainer>
+                <LogoContainer onClick={() => navigate('/')}></LogoContainer>
                 <NavContainer>
                     <StyledNavLink to='/' style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
                         Home
@@ -19,6 +22,9 @@ function Layout({ children }: LayoutProps) {
                     </StyledNavLink>
                     <StyledNavLink to='/lesson13' style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
                         Lesson13
+                    </StyledNavLink>
+                    <StyledNavLink to='/clients' style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
+                        Clients
                     </StyledNavLink>
                 </NavContainer>
             </Header>

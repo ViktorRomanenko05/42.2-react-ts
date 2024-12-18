@@ -14,6 +14,10 @@ import Users from "./components/pages/Users/Users";
 // import Lesson09 from 'lessons/Lesson09/Lesson09';
 // import Lesson11 from 'lessons/Lesson11/Lesson11';
 import Lesson13 from 'lessons/Lesson13/Lesson13';
+import Clients from "./components/pages/Clients/Clients";
+import Chainlink from "./components/pages/Clients/components/Chainlink/Chainlink";
+import Ontology from "./components/pages/Clients/components/Ontology/Ontology";
+import Storj from "./components/pages/Clients/components/Storj/Storj";
 
 //homeworks
 // import Homework07 from './homeworks/Homework07/Homework07';
@@ -35,6 +39,10 @@ function App() {
                     <Route path='/' element={<Home />} />
                     <Route path='/about' element={<About />} />
                     <Route path='/users' element={<Users />} />
+                    <Route path='/clients' element={<Clients />} />
+                    <Route path='/clients/chainlink' element={<Chainlink />} />
+                    <Route path='/clients/ontology' element={<Ontology />} />
+                    <Route path='/clients/storj' element={<Storj />} />
                     <Route path='/lesson13' element={<Lesson13 />} />
                     <Route path='*' element='Page not found' />
                 </Routes>
