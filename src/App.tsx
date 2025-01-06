@@ -18,6 +18,7 @@ import Clients from "./components/pages/Clients/Clients";
 import Chainlink from "./components/pages/Clients/components/Chainlink/Chainlink";
 import Ontology from "./components/pages/Clients/components/Ontology/Ontology";
 import Storj from "./components/pages/Clients/components/Storj/Storj";
+import Homework13 from "./homeworks/Homework13/Homework13";
 
 //homeworks
 // import Homework07 from './homeworks/Homework07/Homework07';
@@ -44,6 +45,7 @@ function App() {
                     <Route path='/clients/ontology' element={<Ontology />} />
                     <Route path='/clients/storj' element={<Storj />} />
                     <Route path='/lesson13' element={<Lesson13 />} />
+                    <Route path='/homework13' element={<Homework13 />} />
                     <Route path='*' element='Page not found' />
                 </Routes>
             </Layout>
