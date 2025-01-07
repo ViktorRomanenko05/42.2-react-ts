@@ -1,6 +1,6 @@
 import {CardsPageWrapper, ButtonContainer, CardsContainer, NoEmployeesText} from "./styles";
 import {useContext} from "react";
-import {EmployeesContext} from "../../manager/EmployeesManager/EmployeesManager";
+import {EmployeesContext} from "../../manager/EmployeesManager/EmployeesProvider";
 import Button from "../../../../components/Button/Button";
 import {FullEmployeeData} from "../../manager/EmployeesManager/types";
 import EmployeeCard from "../EmployeeCard/EmployeeCard";

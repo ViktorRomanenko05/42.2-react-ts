@@ -21,7 +21,7 @@ import Storj from "./components/pages/Clients/components/Storj/Storj";
 import Homework13 from "./homeworks/Homework13/Homework13";
 import LayoutEmployees from "./components/LayoutEmployees/LayoutEmployees";
 import EmployeeForm from "./components/EmployeeForm/EmployeeForm";
-import EmployeesProvider from "./lessons/Lesson14/manager/EmployeesManager/EmployeesManager";
+import EmployeesProvider from "./lessons/Lesson14/manager/EmployeesManager/EmployeesProvider";
 import CardsPage from "./lessons/Lesson14/components/CardsPage/CardsPage";
 
 //homeworks

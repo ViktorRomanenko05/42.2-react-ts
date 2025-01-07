@@ -3,7 +3,7 @@ import FieldInCard from "../FieldInCard/FieldInCard";
 import {EmployeeCardProps} from "./types";
 import Button from "../../../../components/Button/Button";
 import {useContext} from "react";
-import {EmployeesContext} from "../../manager/EmployeesManager/EmployeesManager";
+import {EmployeesContext} from "../../manager/EmployeesManager/EmployeesProvider";
 
 function EmployeeCard(data: EmployeeCardProps) {
     const {deleteEmployee} = useContext(EmployeesContext);

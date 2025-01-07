@@ -15,7 +15,7 @@ import {
 import {EmployeeFormValue, EMPLOYEE_FORM_FIELDS} from "./types";
 import {EmployeeData} from "../../lessons/Lesson14/manager/EmployeesManager/types";
 import {useContext} from "react";
-import {EmployeesContext} from "../../lessons/Lesson14/manager/EmployeesManager/EmployeesManager";
+import {EmployeesContext} from "../../lessons/Lesson14/manager/EmployeesManager/EmployeesProvider";
 
 function EmployeeForm() {
     const {addEmployee} = useContext(EmployeesContext);
