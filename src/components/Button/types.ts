@@ -9,4 +9,5 @@ export interface ButtonProps {
     disabled?: boolean;
     loading?: boolean;
     spinner?: ReactNode;
+    backgroundColor?: string;
 }
