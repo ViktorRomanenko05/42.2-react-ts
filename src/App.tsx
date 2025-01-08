@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Layout from 'components/Layout/Layout';
 import GlobalStyles from './styles/GlobalStyles';
@@ -19,6 +19,10 @@ import Chainlink from "./components/pages/Clients/components/Chainlink/Chainlink
 import Ontology from "./components/pages/Clients/components/Ontology/Ontology";
 import Storj from "./components/pages/Clients/components/Storj/Storj";
 import Homework13 from "./homeworks/Homework13/Homework13";
+import LayoutEmployees from "./components/LayoutEmployees/LayoutEmployees";
+import EmployeeForm from "./components/EmployeeForm/EmployeeForm";
+import EmployeesProvider from "./lessons/Lesson14/manager/EmployeesManager/EmployeesProvider";
+import CardsPage from "./lessons/Lesson14/components/CardsPage/CardsPage";
 
 //homeworks
 // import Homework07 from './homeworks/Homework07/Homework07';
@@ -34,21 +38,30 @@ import Homework13 from "./homeworks/Homework13/Homework13";
 function App() {
     return (
         <BrowserRouter>
-            <GlobalStyles />
-            <Layout>
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/about' element={<About />} />
-                    <Route path='/users' element={<Users />} />
-                    <Route path='/clients' element={<Clients />} />
-                    <Route path='/clients/chainlink' element={<Chainlink />} />
-                    <Route path='/clients/ontology' element={<Ontology />} />
-                    <Route path='/clients/storj' element={<Storj />} />
-                    <Route path='/lesson13' element={<Lesson13 />} />
-                    <Route path='/homework13' element={<Homework13 />} />
-                    <Route path='*' element='Page not found' />
-                </Routes>
-            </Layout>
+            <GlobalStyles/>
+            <LayoutEmployees>
+                <EmployeesProvider>
+                    <Routes>
+                        <Route path="/" element={<EmployeeForm/>}/>
+                        <Route path="/employees" element={<CardsPage/>}/>
+                        <Route path='*' element='Page not found' />
+                    </Routes>
+                </EmployeesProvider>
+            </LayoutEmployees>
+            {/*<Layout>*/}
+            {/*    <Routes>*/}
+            {/*        <Route path='/' element={<Home />} />*/}
+            {/*        <Route path='/about' element={<About />} />*/}
+            {/*        <Route path='/users' element={<Users />} />*/}
+            {/*        <Route path='/clients' element={<Clients />} />*/}
+            {/*        <Route path='/clients/chainlink' element={<Chainlink />} />*/}
+            {/*        <Route path='/clients/ontology' element={<Ontology />} />*/}
+            {/*        <Route path='/clients/storj' element={<Storj />} />*/}
+            {/*        <Route path='/lesson13' element={<Lesson13 />} />*/}
+            {/*        <Route path='/homework13' element={<Homework13 />} />*/}
+            {/*        <Route path='*' element='Page not found' />*/}
+            {/*    </Routes>*/}
+            {/*</Layout>*/}
             {/* <Lesson06 /> */}
             {/* <Lesson07 /> */}
             {/* <Consultation04 /> */}
